@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hildah Muthoni &mdash; Software Developer</title>
+    <title>Marlon Barns &mdash; Cloud Security (Red Team)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -25,13 +25,14 @@
     <link rel="stylesheet" href="css/style.css">
     
     <style>
-      /* Modern Software Developer Design - Elegant Teal & Coral */
+      /* Red Team Cloud Security Design - Bold & Dynamic */
       :root {
-        --primary-color: #14b8a6;
-        --secondary-color: #0d9488;
+        --primary-color: #ef4444;
+        --secondary-color: #dc2626;
         --accent-color: #f97316;
-        --dark-bg: #0f172a;
-        --light-bg: #f1f5f9;
+        --dark-accent: #991b1b;
+        --dark-bg: #0a0a0a;
+        --light-bg: #fafafa;
       }
       
       #home-section,
@@ -43,7 +44,7 @@
       .site-blocks-cover.overlay::before,
       .site-blocks-cover.overlay::after {
         background-image: none !important;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 30%, #2d2d2d 70%, #1a1a1a 100%) !important;
         background-size: auto !important;
         background-repeat: no-repeat !important;
         background-position: unset !important;
@@ -57,22 +58,33 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
+        background: 
+          radial-gradient(circle at 30% 30%, rgba(239, 68, 68, 0.25) 0%, transparent 60%),
+          radial-gradient(circle at 70% 70%, rgba(249, 115, 22, 0.2) 0%, transparent 60%),
+          linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, transparent 50%);
         z-index: 0;
+        animation: pulse 4s ease-in-out infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
       }
       
       .site-blocks-cover h1 {
         color: #fff !important;
-        font-weight: 700;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        font-weight: 800;
+        text-shadow: 3px 3px 10px rgba(0,0,0,0.7), 0 0 20px rgba(239, 68, 68, 0.3);
         position: relative;
         z-index: 1;
+        letter-spacing: 1px;
       }
       
       .site-blocks-cover .lead {
-        color: rgba(255,255,255,0.9) !important;
+        color: rgba(255,255,255,0.95) !important;
         position: relative;
         z-index: 1;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       }
       
       .site-blocks-cover .text-intro {
@@ -82,92 +94,152 @@
       
       .service {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-left: 4px solid transparent;
+        border-left: 5px solid transparent;
         background: #fff;
-        border-radius: 8px;
+        border-radius: 14px;
+        border: 2px solid #e5e7eb;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       }
       
       .service:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 40px rgba(20, 184, 166, 0.15) !important;
-        border-left-color: #14b8a6;
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 25px 60px rgba(239, 68, 68, 0.3) !important;
+        border-left-color: #ef4444;
+        border-color: #ef4444;
+        border-width: 2px;
       }
       
       .service-number span {
-        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%) !important;
-        box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+        box-shadow: 0 6px 25px rgba(239, 68, 68, 0.6);
+        transform: rotate(5deg);
+        transition: transform 0.3s ease;
+      }
+      
+      .service:hover .service-number span {
+        transform: rotate(0deg) scale(1.1);
       }
       
       .btn-primary {
-        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
         border: none;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
-        border-radius: 6px;
+        box-shadow: 0 6px 25px rgba(239, 68, 68, 0.5);
+        border-radius: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
       }
       
       .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
-        background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(239, 68, 68, 0.7);
+        background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
       }
       
       .btn-light {
-        border-radius: 6px;
+        border-radius: 12px;
         transition: all 0.3s ease;
+        font-weight: 700;
+        letter-spacing: 1px;
+        border: 2px solid transparent;
       }
       
       .btn-light:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        background: #fff;
+        border-color: #ef4444;
       }
       
       .section-title:after {
-        background: linear-gradient(135deg, #14b8a6 0%, #f97316 100%) !important;
-        width: 60px;
-        height: 3px;
+        background: linear-gradient(135deg, #ef4444 0%, #f97316 100%) !important;
+        width: 90px;
+        height: 5px;
         display: block;
+        border-radius: 3px;
+        box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
       }
       
       .progress-bar {
-        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%) !important;
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
         border-radius: 4px;
+        box-shadow: 0 3px 10px rgba(239, 68, 68, 0.4);
       }
       
       .card {
         transition: all 0.3s ease;
-        border-radius: 12px;
+        border-radius: 18px;
         overflow: hidden;
+        border: 2px solid #e5e7eb;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       }
       
       .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 40px rgba(20, 184, 166, 0.15) !important;
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 25px 60px rgba(239, 68, 68, 0.25) !important;
+        border-color: #ef4444;
+        border-width: 2px;
       }
       
       .site-section.bg-primary {
-        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%) !important;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
       }
       
       .site-section.bg-light {
-        background: #f8fafc !important;
+        background: #fafafa !important;
       }
       
       .text-primary {
-        color: #14b8a6 !important;
+        color: #ef4444 !important;
       }
       
       .btn-outline-primary {
-        border-color: #14b8a6;
-        color: #14b8a6;
-        border-radius: 6px;
+        border-color: #ef4444;
+        color: #ef4444;
+        border-radius: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        border-width: 2px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
       }
       
       .btn-outline-primary:hover {
-        background: #14b8a6;
-        border-color: #14b8a6;
+        background: #ef4444;
+        border-color: #ef4444;
         color: #fff;
-        transform: translateY(-2px);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.5);
+      }
+      
+      .security-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(249, 115, 22, 0.2) 100%);
+        color: #f97316;
+        border-radius: 30px;
+        font-size: 0.95rem;
+        font-weight: 800;
+        border: 2px solid rgba(249, 115, 22, 0.5);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        letter-spacing: 1px;
+        box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+      }
+      
+      .site-logo a {
+        background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 900;
+        text-shadow: none;
+      }
+      
+      .red-team-accent {
+        color: #ef4444;
+        font-weight: 700;
       }
     </style>
     
@@ -203,7 +275,7 @@
           </div>
 
           <div class=" text-center mx-5">
-            <h1 class="m-0 site-logo"><a href="index.html">HM</a></h1>
+            <h1 class="m-0 site-logo"><a href="index.html">MB</a></h1>
           </div>
 
           <div class="text-left">
@@ -226,7 +298,7 @@
     </header>
 
 
-    <div class="site-blocks-cover overlay" id="home-section" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;">
+    <div class="site-blocks-cover overlay" id="home-section" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 30%, #2d2d2d 70%, #1a1a1a 100%) !important;">
 
       <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -234,11 +306,12 @@
           <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
             <div class="row align-items-center">
               <div class="col-lg-7">
-                <h1 class="text-white mb-3">I'm Hildah Muthoni</h1>
-                <p class="text-white mb-4" style="font-size: 1.5rem; font-weight: 300;">Software Developer <span class="mx-3">|</span> Cloud-Native Solutions</p>
-                <p class="lead text-white mb-4">Passionate Software Developer specializing in building scalable, cloud-native applications. Expert in modern web technologies, cloud platforms, and full-stack development. Creating innovative solutions that leverage the power of cloud computing and cutting-edge software engineering practices.</p>
+                <h1 class="text-white mb-3">I'm Marlon Barns</h1>
+                <p class="text-white mb-3" style="font-size: 1.5rem; font-weight: 300;">Cloud Security (Red Team) <span class="mx-3">|</span> Penetration Tester</p>
+                <span class="security-badge mb-4">🎯 I got 99 problems, but writing code ain't one</span>
+                <p class="lead text-white mb-4">Expert Red Team Cloud Security professional specializing in offensive security, penetration testing, and vulnerability assessment of cloud infrastructure. Passionate about finding security weaknesses before attackers do, using advanced red team techniques, ethical hacking, and security testing methodologies across AWS, Azure, and GCP environments.</p>
                 <div class="mb-4">
-                  <a href="https://github.com/Hildahmuthoni/My-website.git" target="_blank" class="btn btn-light mr-3 mb-2">
+                  <a href="https://github.com/marlonbarns5" target="_blank" class="btn btn-light mr-3 mb-2">
                     <span class="icon-github mr-2"></span>View GitHub
                   </a>
                   <a href="#contact-section" class="btn smoothscroll btn-primary mb-2">Contact Me</a>
@@ -246,7 +319,7 @@
               </div>
               <div class="col-lg-5 text-center">
                 <div class="mt-5 mt-lg-0">
-                  <span class="icon-code" style="font-size: 8rem; color: rgba(255,255,255,0.3); display: block;"></span>
+                  <span class="icon-bug" style="font-size: 8rem; color: rgba(239, 68, 68, 0.4); display: block;"></span>
                 </div>
               </div>
             </div>
@@ -261,16 +334,36 @@
       <div class="container">
         <div class="row ">
           <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5">Software Development Skills</h2>
-            <p class="text-center text-muted">Full-stack development expertise with cloud-native focus</p>
+            <h2 class="section-title text-center mb-5">Red Team Cloud Security Expertise</h2>
+            <p class="text-center text-muted">Offensive security testing and penetration testing of cloud infrastructure</p>
           </div>
     
           <div class="col-md-6 mb-4">
             <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-code"></span></div>
+              <div class="service-number mr-4"><span class="icon-bug"></span></div>
               <div class="service-about">
-                <h3>Full-Stack Development</h3>
-                <p>Expert in JavaScript, TypeScript, React, Node.js, and modern web frameworks. Building responsive, scalable applications with clean code and best practices.</p>
+                <h3>Cloud Penetration Testing</h3>
+                <p>Conducting comprehensive penetration tests of cloud infrastructure across AWS, Azure, and GCP. Identifying security vulnerabilities, misconfigurations, and exploitation paths in cloud environments.</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6 mb-4">
+            <div class="service d-flex h-100">
+              <div class="service-number mr-4"><span class="icon-shield"></span></div>
+              <div class="service-about">
+                <h3>Kubernetes Security Testing</h3>
+                <p>Red team assessments of Kubernetes clusters, testing RBAC bypasses, network policy weaknesses, container escape vulnerabilities, and API server security. Experience with k0s, AKS, and Kubernetes attack vectors.</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6 mb-4">
+            <div class="service d-flex h-100">
+              <div class="service-number mr-4"><span class="icon-lock"></span></div>
+              <div class="service-about">
+                <h3>IAM & Access Control Exploitation</h3>
+                <p>Testing IAM policies, privilege escalation, role assumption attacks, and access control bypasses. Identifying misconfigured permissions, overprivileged roles, and authentication weaknesses in cloud environments.</p>
               </div>
             </div>
           </div>
@@ -279,28 +372,18 @@
             <div class="service d-flex h-100">
               <div class="service-number mr-4"><span class="icon-cloud"></span></div>
               <div class="service-about">
-                <h3>Cloud-Native Development</h3>
-                <p>Developing applications optimized for cloud platforms (AWS, Azure, GCP). Experience with serverless architectures, microservices, and containerization using Docker and Kubernetes.</p>
+                <h3>Cloud Infrastructure Exploitation</h3>
+                <p>Exploiting cloud service misconfigurations, exposed storage buckets, unsecured APIs, and infrastructure vulnerabilities. Testing cloud-native attack techniques and lateral movement in cloud environments.</p>
               </div>
             </div>
           </div>
     
           <div class="col-md-6 mb-4">
             <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-database"></span></div>
+              <div class="service-number mr-4"><span class="icon-eye"></span></div>
               <div class="service-about">
-                <h3>Database & Backend</h3>
-                <p>Designing and implementing RESTful APIs, GraphQL endpoints, and database solutions. Working with SQL, NoSQL databases, and cloud database services.</p>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-cog"></span></div>
-              <div class="service-about">
-                <h3>DevOps & CI/CD</h3>
-                <p>Implementing automated deployment pipelines, version control with Git, and continuous integration/continuous deployment workflows. Experience with GitHub Actions, Jenkins, and cloud CI/CD tools.</p>
+                <h3>Vulnerability Assessment & Scanning</h3>
+                <p>Performing automated and manual vulnerability scanning of cloud resources, container images, and serverless functions. Identifying CVEs, security misconfigurations, and exploitable weaknesses.</p>
               </div>
             </div>
           </div>
@@ -309,18 +392,8 @@
             <div class="service d-flex h-100">
               <div class="service-number mr-4"><span class="icon-server"></span></div>
               <div class="service-about">
-                <h3>Cloud Services Integration</h3>
-                <p>Integrating applications with cloud services including AWS Lambda, S3, API Gateway, and cloud storage solutions. Building scalable, cost-effective cloud applications.</p>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-signal"></span></div>
-              <div class="service-about">
-                <h3>Modern Development Practices</h3>
-                <p>Agile methodologies, test-driven development, code reviews, and documentation. Focus on maintainable, scalable code and collaborative development workflows.</p>
+                <h3>Red Team Exercises & Adversary Simulation</h3>
+                <p>Conducting full-spectrum red team exercises simulating real-world attack scenarios. Testing detection and response capabilities, social engineering, and multi-stage attack chains in cloud environments.</p>
               </div>
             </div>
           </div>
@@ -339,22 +412,31 @@
           </div>
           <div class="col-lg-6 order-2 order-lg-1">
             <div class="mb-4 text-center">
-              <span class="icon-code" style="font-size: 10rem; color: #14b8a6; display: block; opacity: 0.4;"></span>
+              <span class="icon-bug" style="font-size: 10rem; color: #ef4444; display: block; opacity: 0.4;"></span>
             </div>
-            <p class="lead">I'm a Software Developer passionate about creating innovative, scalable solutions. I specialize in full-stack development with a strong focus on cloud-native applications and modern web technologies.</p>
-            <p>With expertise in JavaScript, TypeScript, React, Node.js, and cloud platforms, I build applications that are performant, maintainable, and scalable. I'm committed to writing clean code, following best practices, and continuously learning new technologies.</p>
-            <p>My experience spans from frontend development to backend services, cloud integration, and DevOps practices. I enjoy solving complex problems and creating user-friendly applications that leverage the power of cloud computing.</p>
+            <p class="lead">I'm a <span class="red-team-accent">Red Team Cloud Security</span> professional dedicated to finding and exploiting security vulnerabilities in cloud infrastructure before malicious actors do. I specialize in offensive security testing, penetration testing, and ethical hacking of cloud environments across AWS, Azure, and GCP platforms.</p>
+            <p>With extensive expertise in red team operations, penetration testing methodologies, vulnerability assessment, and security exploitation techniques, I help organizations identify and remediate security weaknesses. I'm committed to thinking like an attacker to strengthen cloud defenses through comprehensive security testing.</p>
+            <p>My experience spans from cloud penetration testing to Kubernetes security assessments, API security testing, infrastructure vulnerability scanning, and red team exercises. I enjoy breaking into systems (ethically) to demonstrate security gaps and help organizations build more resilient cloud security postures.</p>
             <p class="mt-4">
-              <a href="https://github.com/Hildahmuthoni/My-website.git" target="_blank" class="btn btn-primary mr-2">
+              <a href="https://github.com/marlonbarns5" target="_blank" class="btn btn-primary mr-2">
                 <span class="icon-github mr-2"></span>View GitHub
               </a>
               <a href="#contact-section" class="btn btn-outline-primary">Get In Touch</a>
             </p>
           </div>
           <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <h3 class="mb-4">Technical Proficiency</h3>
+            <h3 class="mb-4">Red Team Expertise</h3>
             <div class="mb-5">
-              <strong class="text-black">JavaScript & TypeScript</strong>
+              <strong class="text-black">Cloud Penetration Testing (AWS, Azure, GCP)</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 96%;">
+                  <span>96%</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <strong class="text-black">Kubernetes Security Testing & Exploitation</strong>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
                   style="width: 94%;">
@@ -363,47 +445,38 @@
               </div>
             </div>
             <div class="mb-5">
-              <strong class="text-black">React & Frontend Frameworks</strong>
+              <strong class="text-black">IAM & Access Control Exploitation</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 93%;">
+                  <span>93%</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <strong class="text-black">Vulnerability Assessment & Scanning</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 95%;">
+                  <span>95%</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <strong class="text-black">Red Team Exercises & Adversary Simulation</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 92%;">
+                  <span>92%</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <strong class="text-black">Cloud Infrastructure Exploitation</strong>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
                   style="width: 91%;">
                   <span>91%</span>
-                </div>
-              </div>
-            </div>
-            <div class="mb-5">
-              <strong class="text-black">Node.js & Backend Development</strong>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 89%;">
-                  <span>89%</span>
-                </div>
-              </div>
-            </div>
-            <div class="mb-5">
-              <strong class="text-black">Cloud Platforms (AWS, Azure, GCP)</strong>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 87%;">
-                  <span>87%</span>
-                </div>
-              </div>
-            </div>
-            <div class="mb-5">
-              <strong class="text-black">Database & APIs (SQL, NoSQL, REST, GraphQL)</strong>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 90%;">
-                  <span>90%</span>
-                </div>
-              </div>
-            </div>
-            <div class="mb-5">
-              <strong class="text-black">DevOps & CI/CD (Git, Docker, Kubernetes)</strong>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 85%;">
-                  <span>85%</span>
                 </div>
               </div>
             </div>
@@ -422,8 +495,8 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 position-relative">
-            <h2 class="section-title text-center mb-5">Software Development Projects</h2>
-            <p class="text-center mb-5">Explore my software development work on GitHub: <a href="https://github.com/Hildahmuthoni/My-website.git" target="_blank" class="text-primary">github.com/Hildahmuthoni/My-website</a></p>
+            <h2 class="section-title text-center mb-5">Red Team Security Projects</h2>
+            <p class="text-center mb-5">Explore my red team security work on GitHub: <a href="https://github.com/marlonbarns5" target="_blank" class="text-primary">github.com/marlonbarns5</a></p>
           </div>
         </div>
 
@@ -432,30 +505,60 @@
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body text-center p-4">
-                <span class="icon-code" style="font-size: 4rem; color: #14b8a6; display: block; margin-bottom: 1rem;"></span>
-                <h4 class="mt-3 mb-3">Web Applications</h4>
-                <p class="text-muted">Full-stack web applications built with React, Node.js, and modern JavaScript frameworks. Responsive designs and cloud-integrated solutions.</p>
-                <a href="https://github.com/Hildahmuthoni/My-website.git" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
+                <span class="icon-bug" style="font-size: 4rem; color: #ef4444; display: block; margin-bottom: 1rem;"></span>
+                <h4 class="mt-3 mb-3">Kubernetes Security Testing</h4>
+                <p class="text-muted">Red team assessments of Kubernetes clusters using click CLI, k0s, and cyclops. Testing RBAC bypasses, container escapes, and API server vulnerabilities.</p>
+                <a href="https://github.com/marlonbarns5" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body text-center p-4">
-                <span class="icon-cloud" style="font-size: 4rem; color: #14b8a6; display: block; margin-bottom: 1rem;"></span>
-                <h4 class="mt-3 mb-3">Cloud-Native Apps</h4>
-                <p class="text-muted">Applications designed for cloud deployment with serverless functions, containerization, and cloud service integration. Scalable and cost-effective solutions.</p>
-                <a href="https://github.com/Hildahmuthoni/My-website.git" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
+                <span class="icon-shield" style="font-size: 4rem; color: #ef4444; display: block; margin-bottom: 1rem;"></span>
+                <h4 class="mt-3 mb-3">Kubernetes Certification Security</h4>
+                <p class="text-muted">Security testing platform for CKS, CKA, and CKAD certifications. Identifying vulnerabilities in Kubernetes exam environments and security configurations.</p>
+                <a href="https://github.com/marlonbarns5" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body text-center p-4">
-                <span class="icon-database" style="font-size: 4rem; color: #14b8a6; display: block; margin-bottom: 1rem;"></span>
-                <h4 class="mt-3 mb-3">APIs & Backend Services</h4>
-                <p class="text-muted">RESTful APIs, GraphQL endpoints, and backend services. Database design, authentication, and cloud-based data management solutions.</p>
-                <a href="https://github.com/Hildahmuthoni/My-website.git" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
+                <span class="icon-cloud" style="font-size: 4rem; color: #ef4444; display: block; margin-bottom: 1rem;"></span>
+                <h4 class="mt-3 mb-3">Cloud Penetration Testing</h4>
+                <p class="text-muted">Comprehensive penetration testing of cloud infrastructure across AWS, Azure, and GCP. Exploiting misconfigurations and identifying security weaknesses.</p>
+                <a href="https://github.com/marlonbarns5" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body text-center p-4">
+                <span class="icon-lock" style="font-size: 4rem; color: #ef4444; display: block; margin-bottom: 1rem;"></span>
+                <h4 class="mt-3 mb-3">IAM Exploitation & Testing</h4>
+                <p class="text-muted">Testing IAM policies, privilege escalation attacks, and access control bypasses. Identifying overprivileged roles and authentication vulnerabilities.</p>
+                <a href="https://github.com/marlonbarns5" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body text-center p-4">
+                <span class="icon-eye" style="font-size: 4rem; color: #ef4444; display: block; margin-bottom: 1rem;"></span>
+                <h4 class="mt-3 mb-3">Vulnerability Assessment Tools</h4>
+                <p class="text-muted">Automated vulnerability scanning and security assessment tools for cloud environments. Identifying CVEs, misconfigurations, and exploitable weaknesses.</p>
+                <a href="https://github.com/marlonbarns5" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body text-center p-4">
+                <span class="icon-server" style="font-size: 4rem; color: #ef4444; display: block; margin-bottom: 1rem;"></span>
+                <h4 class="mt-3 mb-3">Red Team Exercises</h4>
+                <p class="text-muted">Full-spectrum red team exercises and adversary simulation scenarios. Testing detection capabilities and multi-stage attack chains in cloud environments.</p>
+                <a href="https://github.com/marlonbarns5" target="_blank" class="btn btn-sm btn-primary mt-3">View Repository</a>
               </div>
             </div>
           </div>
@@ -471,37 +574,37 @@
       <div class="container">
         <div class="row">
           <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5 text-white">Technologies & Tools</h2>
-            <p class="text-center text-white mb-5">Modern development stack with cloud integration</p>
+            <h2 class="section-title text-center mb-5 text-white">Red Team Security Tools</h2>
+            <p class="text-center text-white mb-5">Comprehensive offensive security toolkit for cloud penetration testing</p>
           </div>
         </div>
         <div class="row text-center">
           <div class="col-md-3 mb-4">
             <div class="text-white">
-              <span class="icon-code" style="font-size: 4rem; display: block; margin-bottom: 1rem; opacity: 0.9;"></span>
-              <h4 class="mb-3">Frontend</h4>
-              <p class="text-white-50">React, JavaScript, TypeScript, HTML5, CSS3</p>
+              <span class="icon-bug" style="font-size: 4rem; display: block; margin-bottom: 1rem; opacity: 0.9;"></span>
+              <h4 class="mb-3">Penetration Testing</h4>
+              <p class="text-white-50">Metasploit, Burp Suite, OWASP ZAP, Nmap, Cloud-specific exploitation tools</p>
             </div>
           </div>
           <div class="col-md-3 mb-4">
             <div class="text-white">
               <span class="icon-server" style="font-size: 4rem; display: block; margin-bottom: 1rem; opacity: 0.9;"></span>
-              <h4 class="mb-3">Backend</h4>
-              <p class="text-white-50">Node.js, Express, REST APIs, GraphQL</p>
+              <h4 class="mb-3">Kubernetes Testing</h4>
+              <p class="text-white-50">k0s, click CLI, cyclops, kubectl, Kubernetes security assessment tools</p>
             </div>
           </div>
           <div class="col-md-3 mb-4">
             <div class="text-white">
-              <span class="icon-cloud" style="font-size: 4rem; display: block; margin-bottom: 1rem; opacity: 0.9;"></span>
-              <h4 class="mb-3">Cloud Platforms</h4>
-              <p class="text-white-50">AWS, Azure, GCP, Serverless, Containers</p>
+              <span class="icon-shield" style="font-size: 4rem; display: block; margin-bottom: 1rem; opacity: 0.9;"></span>
+              <h4 class="mb-3">Cloud Exploitation</h4>
+              <p class="text-white-50">Pacu, CloudSploit, Scout Suite, CloudBrute, Cloud-specific attack frameworks</p>
             </div>
           </div>
           <div class="col-md-3 mb-4">
             <div class="text-white">
-              <span class="icon-cog" style="font-size: 4rem; display: block; margin-bottom: 1rem; opacity: 0.9;"></span>
-              <h4 class="mb-3">DevOps Tools</h4>
-              <p class="text-white-50">Git, Docker, Kubernetes, CI/CD, GitHub Actions</p>
+              <span class="icon-eye" style="font-size: 4rem; display: block; margin-bottom: 1rem; opacity: 0.9;"></span>
+              <h4 class="mb-3">Vulnerability Scanning</h4>
+              <p class="text-white-50">Nessus, OpenVAS, Trivy, Clair, Cloud security scanning platforms</p>
             </div>
           </div>
         </div>
@@ -562,32 +665,32 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4">
-            <h3 class="footer-title">Hildah Muthoni</h3>
-            <p>Software Developer specializing in full-stack development and cloud-native applications.</p>
-            <p>Building innovative, scalable solutions with modern technologies.</p>
+            <h3 class="footer-title">Marlon Barns</h3>
+            <p>Red Team Cloud Security Specialist dedicated to finding vulnerabilities before attackers do.</p>
+            <p>🎯 I got 99 problems, but writing code ain't one - Breaking into systems (ethically) to strengthen defenses.</p>
           </div>
           <div class="col-md-4">
-            <h3 class="footer-title">Development Skills</h3>
+            <h3 class="footer-title">Red Team Expertise</h3>
             <ul class="list-unstyled">
-              <li>✓ Full-Stack Development (React, Node.js)</li>
-              <li>✓ Cloud-Native Applications</li>
-              <li>✓ RESTful APIs & GraphQL</li>
-              <li>✓ Database Design & Management</li>
-              <li>✓ DevOps & CI/CD</li>
+              <li>✓ Cloud Penetration Testing (AWS, Azure, GCP)</li>
+              <li>✓ Kubernetes Security Testing & Exploitation</li>
+              <li>✓ IAM & Access Control Exploitation</li>
+              <li>✓ Vulnerability Assessment & Scanning</li>
+              <li>✓ Red Team Exercises & Adversary Simulation</li>
             </ul>
           </div>
           <div class="col-md-4">
             <h3 class="footer-title">Connect</h3>
-            <a href="https://github.com/Hildahmuthoni/My-website.git" target="_blank" class="social-circle p-2"><span class="icon-github"></span></a>
-            <a href="https://github.com/Hildahmuthoni/My-website.git" target="_blank" class="d-block mt-2 text-dark">github.com/Hildahmuthoni/My-website</a>
-            <p class="mt-3 text-muted">Let's create something amazing together!</p>
+            <a href="https://github.com/marlonbarns5" target="_blank" class="social-circle p-2"><span class="icon-github"></span></a>
+            <a href="https://github.com/marlonbarns5" target="_blank" class="d-block mt-2 text-dark">github.com/marlonbarns5</a>
+            <p class="mt-3 text-muted">🎯 Let's test your cloud security together!</p>
           </div>
         </div>
 
         <div class="row">
           <div class="col-12 text-center">
             <p>Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> Hildah Muthoni. All rights reserved.</p>
+            <script>document.write(new Date().getFullYear());</script> Marlon Barns. All rights reserved.</p>
           </div>
         </div>
       </div>
